@@ -1,7 +1,7 @@
 module UnitsToValue
 
-using Unitful
-using PhysicalConstants
+import Unitful: upreferred, @u_str
+import PhysicalConstants: CODATA2018
 
 macro with_unit(arg1, arg2)
     arg2 = @eval @u_str $arg2
